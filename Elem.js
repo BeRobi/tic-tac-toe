@@ -1,32 +1,19 @@
 class Elem {
-  #index;
-  constructor(szuloElem, index) {
-    this.#index = index;
+  constructor(szuloElem) {
     szuloElem.append("<div class='elem'><p></p></div>");
 
-    this.divElem = $("article div:last-child");
+    this.divElem = $("article div");
 
-    this.pElem = $("article div:last-child p");
+    this.pElem = $("article div p");
 
     this.divElem.on("click", () => {
-      // this.setElem("X");
-      //console.log(this.#index);
-      // létrehozunk egy saját eseményt: elemKattintás
-      this.kattintasTrigger();
+      this.setElem("X");
+      console.log(this);
     });
   }
-  getIndex() {
-    return this.#index;
-  }
+
   setElem(adat) {
     this.pElem.html(adat);
-  }
-  kattintasTrigger() {
-    // létrehozza a saját eseményünket
-    const esemeny = new CustomEvent("elemKattintas", {
-      detail: this /*.#index*/,
-    });
-    window.dispatchEvent(esemeny);
   }
 }
 

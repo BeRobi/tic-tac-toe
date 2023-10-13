@@ -1,5 +1,10 @@
-import Jatekter from "./Jatekter.js";
+import Elem from "./Elem.js";
 
 $(function () {
-  new Jatekter();
+  const szuloElem = $("article");
+  let index = 0;
+  while (index < 1) {
+    const elem = new Elem(szuloElem);
+    index++;
+  }
 });

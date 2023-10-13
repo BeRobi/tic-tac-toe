@@ -6,13 +6,10 @@ article {
   margin: auto;
   width: fit-content;
   max-width: 60%;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .elem {
   border: 1px solid black;
-  flex: 0 0 calc(33% - 5px);
   width: 10rem;
   height: 15rem;
 }
